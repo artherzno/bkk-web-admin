@@ -1,0 +1,49 @@
+/* ========= Core =================*/
+html, body { width: 100%; height: 100%; font-size: 14px; }
+.header { background-color: #299650; width: 100%; height: 50px; }
+.header .logo { width: 40px; height: 40px; margin: 5px 10px; }
+
+/* ========= Edit Bs4 =============*/
+input.form-control { border-radius: 0; border: 1px solid #dadada; }
+.btn { font-size: 16px; }
+.btn.btn-primary { background: #2486EC; box-shadow: 0 1px 5px 0 rgba(0,0,0,0.35); border-radius: 2px; }
+.btn.btn-light { background: #ffffff; box-shadow: 0 1px 5px 0 rgba(0,0,0,0.35); border-radius: 2px;}
+
+/* ========= Login Page ===========*/
+#login-page { background: #299650 url('../images/bg-login.jpg') no-repeat center; background-size: cover; width: 100%; height: 100%; position: relative; }
+#login-page .login-box { position: absolute; margin: auto; top: 0; right: 0; bottom: 0; left: 0; width: 30%; height: 50%; text-align: center; }
+#login-page .login-box img { margin-bottom: 30px; }
+#login-page .login-box fieldset { position: relative; margin: 0 auto; width: 100%; max-width: 250px;}
+#login-page .login-box i { position: absolute; top: 0; bottom: 0; right: 15px; margin: auto; width: 14px; height: 14px; color: #c6c9cd; }
+#login-page .login-box input.form-control { width: 100%; max-width: 250px; margin: auto; height: 40px; }
+#login-page .login-box input.form-control::-webkit-input-placeholder,
+#login-page .login-box input.form-control:-ms-input-placeholder,
+#login-page .login-box input.form-control::placeholder { color: #c6c9cd; }
+#login-page .login-box input.bkk-wa-password { padding-right: 35px; }
+#login-page .login-box .btn { width: 250px; height: 40px; margin: 16px auto 0; }
+#login-page .login-box #forgetpassword { color: #c6c9cd; margin-top: 15px; display: block; }
+
+/* ========= Manage User Page ===========*/
+
+
+/* ========= Responsive ============*/
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 320.98px) {
+  #login-page .login-box { height: 70%; }
+}
+
+@media (max-width: 575.98px) {
+  #login-page .login-box { width: 100%; }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
