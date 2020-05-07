@@ -6,8 +6,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Bangkok Web Admin</title>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
@@ -16,13 +17,13 @@
         <a class="navbar-brand" href="#">
           <img src="assets/images/logo.png" alt="Bangkok Web Admin" class="logo">
         </a>
-        <div class="nav-item dropdown">
+        <div class="nav-item dropdown ml-auto">
           <a class="nav-link navbar-toggler dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="icon-bar top-bar"></span>
           	<span class="icon-bar middle-bar"></span>
           	<span class="icon-bar bottom-bar"></span>
           </a>
-          <div class="dropdown-menu">
+          <div class="dropdown-menu ml-auto">
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
@@ -33,39 +34,418 @@
       </div>
 
       <div class="container">
+
         <div class="header">
           <h3>จัดการผู้ใช้งาน</h3>
-          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
-            <i class="fa fa-plus"></i> เพิ่มผู้ใช้งาน
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addUserModal">
+            <ion-icon name="add-sharp"></ion-icon> เพิ่มผู้ใช้งาน
           </button>
         </div>
+
+        <div class="table-responsive">
+          <!-- Table User -->
+          <table class="table table-inverse|reflow|striped|bordered|hover|sm">
+            <thead>
+              <tr>
+                <th>ที่ <i class="fa fa-sort-down"></i></th>
+                <th>ชื่อ - นามสกุล  <i class="fa fa-sort-down"></th>
+                <th>สังกัดพื้นที่ <i class="fa fa-sort-down"></th>
+                <th>บทบาทหน้าที่ <i class="fa fa-sort-down"></th>
+                <th>วันที่สร้าง <i class="fa fa-sort-down"></th>
+                <th>แก้ไขล่าสุด <i class="fa fa-sort-down"></th>
+                <th>สถานะ</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>สมชาย จิตอาสา</td>
+                <td>สวนหลวง</td>
+                <td>เจ้าหน้าที่สำรวจ</td>
+                <td>19/12/2562, 08:00</td>
+                <td>19/12/2562, 08:00</td>
+                <td>
+                  <form>
+                      <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="customSwitch-1">
+                          <label class="custom-control-label" for="customSwitch-1"></label>
+                      </div>
+                  </form>
+                </td>
+                <td>
+                  <button class="btn btn-link" data-toggle="modal" data-target="#editUserModal">
+                    <ion-icon name="pencil-sharp"></ion-icon> แก้ไขข้อมูล
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-link" data-toggle="modal" data-target="#deleteUserModal">
+                    <ion-icon name="trash-sharp"></ion-icon> ลบผู้ใช้งาน
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>สมหวัง จิตอาสา</td>
+                <td>ประเวศ</td>
+                <td>เจ้าหน้าที่สำรวจ</td>
+                <td>19/12/2562, 08:00</td>
+                <td>19/12/2562, 08:00</td>
+                <td>
+                  <form>
+                      <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="customSwitch-2">
+                          <label class="custom-control-label" for="customSwitch-2"></label>
+                      </div>
+                  </form>
+                </td>
+                <td>
+                  <button class="btn btn-link" data-toggle="modal" data-target="#editUserModal">
+                    <ion-icon name="pencil-sharp"></ion-icon> แก้ไขข้อมูล
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-link" data-toggle="modal" data-target="#deleteUserModal">
+                    <ion-icon name="trash-sharp"></ion-icon> ลบผู้ใช้งาน
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>สมคิด จิตอาสา</td>
+                <td>ลาดกระบัง</td>
+                <td>เจ้าหน้าที่สำรวจ</td>
+                <td>19/12/2562, 08:00</td>
+                <td>19/12/2562, 08:00</td>
+                <td>
+                  <form>
+                      <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="customSwitch-3">
+                          <label class="custom-control-label" for="customSwitch-3"></label>
+                      </div>
+                  </form>
+                </td>
+                <td>
+                  <button class="btn btn-link" data-toggle="modal" data-target="#editUserModal">
+                    <ion-icon name="pencil-sharp"></ion-icon> แก้ไขข้อมูล
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-link" data-toggle="modal" data-target="#deleteUserModal">
+                    <ion-icon name="trash-sharp"></ion-icon> ลบผู้ใช้งาน
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Pagination -->
+          <div aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true"><ion-icon name="play-skip-back-sharp"></ion-icon></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true"><ion-icon name="caret-back-sharp"></ion-icon></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true"><ion-icon name="caret-forward-sharp"></ion-icon></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true"><ion-icon name="play-skip-forward-sharp"></ion-icon></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- Modal Add User -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <h5 class="modal-title" id="addUserLongTitle">เพิ่มผู้ใช้งาน</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <form>
+              <h5>ข้อมูลทั่วไป</h5>
+
+              <div class="row justify-content-start">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">ชื่อ</label>
+                    <input type="text" class="form-control" id="name" placeholder="กรุณากรอก" value="">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">นามสกุล</label>
+                    <input type="text" class="form-control" id="surname" placeholder="กรุณากรอก" value="">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">หมายเลขบัตรประชาชน</label>
+                    <input type="text" class="form-control" id="IDcard" placeholder="กรุณากรอก" value="">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">หมายเลขโทรศัพท์</label>
+                    <input type="text" class="form-control" id="telephone" placeholder="กรุณากรอก" value="">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">อีเมล</label>
+                    <input type="email" class="form-control" id="email" placeholder="กรุณากรอก" value="">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                    <label for="name" class="control-label">ที่อยู่</label>
+                    <input type="text" class="form-control" id="address" placeholder="กรุณากรอก" value="">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">จังหวัด</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>กรุณาเลือก</option>
+                      <option>กรุงเทพมหานคร</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">อำเภอ/เขต</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>กรุณาเลือก</option>
+                      <option>บางกะปิ</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">ตำบล/แขวง</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>กรุณาเลือก</option>
+                      <option>หัวหมาก</option>
+                    </select>
+                </div>
+              </div>
+
+              <h5>ข้อมูลการใช้งาน</h5>
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">ชื่อผู้ใช้งาน</label>
+                    <input type="text" class="form-control" id="IDcard" placeholder="กรุณากรอก" value="">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">รหัสผ่าน</label>
+                    <input type="text" class="form-control" id="telephone" placeholder="กรุณากรอก" value="">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">สังกัดพื้นที่</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>กรุณาเลือก</option>
+                      <option>ประเวศ</option>
+                    </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">กลุ่ม (บริษัท)</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>กรุณาเลือก</option>
+                      <option>เจ้าหน้าที่ฝ่ายสำรวจ</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">บทบาทหน้าที่</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>กรุณาเลือก</option>
+                      <option>เจ้าหน้าที่ฝ่ายสำรวจ</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">สถานะการใช้งาน</label>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch-4" checked>
+                        <label class="custom-control-label" for="customSwitch-4">เปิดใช้งาน</label>
+                    </div>
+                </div>
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
+            <button type="button" class="btn btn-secondary">เพิ่ม</button>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Modal Edit User -->
+    <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editUserLongTitle">แก้ไขข้อมูลผู้ใช้งาน</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <h5>ข้อมูลทั่วไป</h5>
+
+              <div class="row justify-content-start">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">ชื่อ</label>
+                    <input type="text" class="form-control" id="name" placeholder="กรุณากรอก" value="สมชาย">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">นามสกุล</label>
+                    <input type="text" class="form-control" id="surname" placeholder="กรุณากรอก" value="จิตอาสา">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">หมายเลขบัตรประชาชน</label>
+                    <input type="text" class="form-control" id="IDcard" placeholder="กรุณากรอก" value="1820100092918">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">หมายเลขโทรศัพท์</label>
+                    <input type="text" class="form-control" id="telephone" placeholder="กรุณากรอก" value="0820202928">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">อีเมล</label>
+                    <input type="email" class="form-control" id="email" placeholder="กรุณากรอก" value="somchai@gmail.com">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                    <label for="name" class="control-label">ที่อยู่</label>
+                    <input type="text" class="form-control" id="address" placeholder="กรุณากรอก" value="436 ถนนรามคำแหง ">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">จังหวัด</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>กรุงเทพมหานคร</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">อำเภอ/เขต</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>บางกะปิ</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">ตำบล/แขวง</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>หัวหมาก</option>
+                    </select>
+                </div>
+              </div>
+
+              <h5>ข้อมูลการใช้งาน</h5>
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">ชื่อผู้ใช้งาน</label>
+                    <input type="text" class="form-control" id="IDcard" placeholder="กรุณากรอก" value="somchai0102">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">รหัสผ่าน</label>
+                    <input type="text" class="form-control" id="telephone" placeholder="กรุณากรอก" value="P@ssword">
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">สังกัดพื้นที่</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>ประเวศ</option>
+                    </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">กลุ่ม (บริษัท)</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>เจ้าหน้าที่ฝ่ายสำรวจ</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">บทบาทหน้าที่</label>
+                    <select class="custom-select form-control form-control-sm">
+                      <option>เจ้าหน้าที่ฝ่ายสำรวจ</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="name" class="control-label">สถานะการใช้งาน</label>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch-4" checked>
+                        <label class="custom-control-label" for="customSwitch-4">เปิดใช้งาน</label>
+                    </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
+            <button type="button" class="btn btn-primary">บันทึก</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Delete User -->
+    <div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="deleteUserTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editUserLongTitle">แจ้งเตือน</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>ท่านยืนยันที่จะลบผู้ใช้งาน “สมชาย จิตอาสา” ใช่หรือไม่</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-dismiss="modal">ไม่ใช่</button>
+            <button type="button" class="btn btn-primary">ใช่</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

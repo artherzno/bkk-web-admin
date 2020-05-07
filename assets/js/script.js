@@ -1,7 +1,7 @@
 $(function() {
 
   // Login Page - Toggle password
-  $('#togglePassword').on('click', function(event) {
+  $('#login-page ion-icon').on('click', function(event) {
     var password = $('#password');
     var passwordType = password.attr('type');
 
