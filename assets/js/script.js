@@ -12,4 +12,14 @@ $(function() {
     }
   });
 
+  // Switch checked always
+  $('.switch-checked').change(function(){
+      $(this).prop('checked', true);
+  });
+
+  // Switch non-checked always
+  $('.switch-non-checked').change(function(){
+      $(this).prop('checked', false);
+  });
+
 });
