@@ -43,8 +43,23 @@
         </div>
 
         <div class="table-responsive">
+          <div class="table-nav navbar navbar-expand-lg navbar-light">
+
+            <div class="">
+              <h5>รายการผู้ใช้งาน</h5>
+            </div>
+
+            <div class="table-nav-search">
+              <form class="form-inline my-2 my-lg-0">
+                <ion-icon name="search-sharp"></ion-icon>
+                <input class="form-control" type="search" placeholder="กรอกคำที่ต้องการค้นหา" aria-label="Search">
+              </form>
+            </div>
+          </div>
+
           <!-- Table User -->
-          <table class="table table-inverse|reflow|striped|bordered|hover|sm">
+          <div class="" style="width: 100%; overflow: scroll;">
+            <table class="table table-inverse|reflow|striped|bordered|hover|sm">
             <thead>
               <tr>
                 <th>ที่ <i class="fa fa-sort-down"></i></th>
@@ -95,7 +110,7 @@
                 <td>
                   <form>
                       <div class="custom-control custom-switch">
-                          <input type="checkbox" class="custom-control-input switch-non-checked" id="customSwitch-2"> 
+                          <input type="checkbox" class="custom-control-input switch-non-checked" id="customSwitch-2">
                           <label class="custom-control-label" for="customSwitch-2"></label>
                       </div>
                   </form>
@@ -139,6 +154,7 @@
               </tr>
             </tbody>
           </table>
+          </div>
 
           <!-- Pagination -->
           <div aria-label="Page navigation example">

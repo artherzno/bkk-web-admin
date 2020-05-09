@@ -20,7 +20,7 @@
 /* ========= Core ================= */
 html, body { width: 100%; height: 100%; font-size: 14px; background-color: #ececec; font-family: 'thonburi'; color: #4a4a4a; }
 
-.nav { background: #299650 url('../images/bg-login.jpg') no-repeat top left; background-size: cover; width: 100%; height: 50px; }
+.nav { background: #299650 url('../images/bg-login.jpg') no-repeat top left; background-size: cover; width: 100%; height: 50px; /* position: fixed; top: 0; left: 0; */ }
 .nav .navbar-brand { padding-bottom: 5px; margin-left: 10px; margin-right: 10px; }
 .nav .navbar-brand .logo { width: 40px; height: 40px; }
 .nav .nav-item { width: 50px; height: 50px; background-color: #1b793c; }
@@ -31,10 +31,19 @@ html, body { width: 100%; height: 100%; font-size: 14px; background-color: #ecec
 .nav .dropdown .dropdown-menu .dropdown-item:hover { background-color: #299650; }
 .nav .dropdown .dropdown-menu .dropdown-divider { background-color: #299650; }
 
+.container { /* margin-top: 50px; */ }
 .container .header { overflow: hidden; padding-bottom: 10px; }
 .container .header h3 { float: left; margin-top: 4px; }
 .container .header .btn { float: right; margin: 4px; padding-left: 20px; padding-right: 20px; }
 .container .table-responsive { padding: 32px 30px; background-color: #ffffff; box-shadow: 0 1px 5px 0 rgba(0,0,0,0.35); }
+.container .table-nav { padding: 0 0 8px; margin: 0; }
+.container .table-nav h5 { font-size: 16px; color: #2486ec; }
+
+.container .table-nav { justify-content: space-between; overflow: hidden; }
+.container .table-nav h5 { float: left; }
+.container .table-nav .table-nav-search { float: right; }
+.container .table-nav ion-icon { float: right; color: #c6c9cd; font-size: 20px; }
+.container .table-nav .form-control { border: none; float: right; font-size: 13px; width: 88%; }
 .container .table thead tr { background-color: #E1EDFB; }
 .container .table thead tr th { color: #232E39; border: none; }
 .container .table thead tr th .fa-sort-down { float: right; padding: 2px 0; }
@@ -116,6 +125,8 @@ input.form-control { border-radius: 0; border: 1px solid #dadada; }
     h3 { font-size: 1.25rem; }
 
     .btn { font-size: 14px; }
+
+    .container .table-nav .form-control { width: 84%; }
 }
 
 /* Medium devices (tablets, 768px and up) */
