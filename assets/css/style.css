@@ -134,7 +134,7 @@ textarea.form-control { border-radius: 0; border: none; border-bottom: 1px solid
 #login-page .login-box img { margin-bottom: 30px; }
 #login-page .login-box fieldset { position: relative; margin: 0 auto; width: 100%; max-width: 250px;}
 #login-page .login-box ion-icon { position: absolute; top: 0; bottom: 0; right: 15px; margin: auto; width: 14px; height: 14px; color: #c6c9cd; cursor: pointer; }
-#login-page .login-box input.form-control { width: 100%; max-width: 250px; margin: auto; height: 40px; }
+#login-page .login-box input.form-control { width: 100%; max-width: 250px; margin: auto; height: 40px; padding: 5px 10px; }
 #login-page .login-box input[type="passsword"]{ padding-right: 35px; }
 #login-page .login-box .btn { width: 100%; max-width: 250px; height: 40px; margin: 16px auto 0; }
 #login-page .login-box #forgetpassword { color: #c6c9cd; margin-top: 15px; display: block; }
