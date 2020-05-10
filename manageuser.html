@@ -26,14 +26,14 @@
           	<span class="icon-bar bottom-bar"></span>
           </a>
           <div class="dropdown-menu ml-auto">
-            <ul class="nav nav-left nav-pills" id="pills-tab" role="tablist">
+            <ul class="nav nav-left nav-pills" id="pills-navleft-tab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+                <a class="nav-link active" id="pills-manageuser-tab" data-toggle="pill" href="#pills-manageuser" role="tab" aria-controls="pills-manageuser" aria-selected="true">
                   <ion-icon name="person-sharp"></ion-icon> จัดการผู้ใช้
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                <a class="nav-link" id="pills-managegroup-tab" data-toggle="pill" href="#pills-managegroup" role="tab" aria-controls="pills-managegroup" aria-selected="false">
                   <ion-icon name="people-sharp"></ion-icon> จัดการกลุ่ม
                 </a>
               </li>
@@ -621,109 +621,185 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
-              <h5>ข้อมูลทั่วไป</h5>
-
-              <div class="row justify-content-start">
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">ชื่อ</label>
-                    <input type="text" class="form-control" id="name" placeholder="กรุณากรอก" value="">
-                </div>
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">นามสกุล</label>
-                    <input type="text" class="form-control" id="surname" placeholder="กรุณากรอก" value="">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">หมายเลขบัตรประชาชน</label>
-                    <input type="text" class="form-control" id="IDcard" placeholder="กรุณากรอก" value="">
-                </div>
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">หมายเลขโทรศัพท์</label>
-                    <input type="text" class="form-control" id="telephone" placeholder="กรุณากรอก" value="">
-                </div>
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">อีเมล</label>
-                    <input type="email" class="form-control" id="email" placeholder="กรุณากรอก" value="">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="form-group col-xs-12 col-sm-12 col-md-12">
-                    <label for="name" class="control-label">ที่อยู่</label>
-                    <input type="text" class="form-control" id="address" placeholder="กรุณากรอก" value="">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">จังหวัด</label>
-                    <select class="custom-select form-control form-control-sm">
-                      <option>กรุณาเลือก</option>
-                      <option>กรุงเทพมหานคร</option>
-                    </select>
-                </div>
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">อำเภอ/เขต</label>
-                    <select class="custom-select form-control form-control-sm">
-                      <option>กรุณาเลือก</option>
-                      <option>บางกะปิ</option>
-                    </select>
-                </div>
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">ตำบล/แขวง</label>
-                    <select class="custom-select form-control form-control-sm">
-                      <option>กรุณาเลือก</option>
-                      <option>หัวหมาก</option>
-                    </select>
-                </div>
-              </div>
-
-              <h5>ข้อมูลการใช้งาน</h5>
-              <div class="row">
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">ชื่อผู้ใช้งาน</label>
-                    <input type="text" class="form-control" id="IDcard" placeholder="กรุณากรอก" value="">
-                </div>
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">รหัสผ่าน</label>
-                    <input type="text" class="form-control" id="telephone" placeholder="กรุณากรอก" value="">
-                </div>
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">สังกัดพื้นที่</label>
-                    <select class="custom-select form-control form-control-sm">
-                      <option>กรุณาเลือก</option>
-                      <option>ประเวศ</option>
-                    </select>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">กลุ่ม (บริษัท)</label>
-                    <select class="custom-select form-control form-control-sm">
-                      <option>กรุณาเลือก</option>
-                      <option>เจ้าหน้าที่ฝ่ายสำรวจ</option>
-                    </select>
-                </div>
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">บทบาทหน้าที่</label>
-                    <select class="custom-select form-control form-control-sm">
-                      <option>กรุณาเลือก</option>
-                      <option>เจ้าหน้าที่ฝ่ายสำรวจ</option>
-                    </select>
-                </div>
-                <div class="form-group col-xs-12 col-sm-12 col-md-4">
-                    <label for="name" class="control-label">สถานะการใช้งาน</label>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch-4" checked>
-                        <label class="custom-control-label" for="customSwitch-4">เปิดใช้งาน</label>
+            <!-- Tabs - Nav -->
+            <ul class="nav nav-pills mb-3" id="pills-editGroup-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pills-infouser-tab" data-toggle="pill" href="#pills-infouser" role="tab" aria-controls="pills-infouser" aria-selected="true"><h5>ข้อมูลทีมงาน</h5></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-listteam-tab" data-toggle="pill" href="#pills-listteam" role="tab" aria-controls="pills-listteam" aria-selected="false"><h5>รายชื่อทีมงาน</h5></a>
+              </li>
+            </ul>
+            <!-- Tabs - Content -->
+            <div class="tab-content" id="pills-tabContent">
+              <!-- Tabs - Info User -->
+              <div class="tab-pane fade show active" id="pills-infouser" role="tabpanel" aria-labelledby="pills-infouser-tab">
+                <form>
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                        <label for="name" class="control-label">ชื่อกลุ่ม (บริษัท)</label>
+                        <input type="text" class="form-control" id="IDcard" placeholder="กรุณากรอก" value="">
                     </div>
+                    <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                        <label for="name" class="control-label">หมายเลขโทรศัพท์</label>
+                        <input type="text" class="form-control" id="telephone" placeholder="กรุณากรอก" value="">
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                        <label for="name" class="control-label">อีเมล</label>
+                        <input type="email" class="form-control" id="email" placeholder="กรุณากรอก" value="">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                        <label for="name" class="control-label">ที่อยู่</label>
+                        <input type="text" class="form-control" id="address" placeholder="กรุณากรอก" value="">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                        <label for="name" class="control-label">จังหวัด</label>
+                        <select class="custom-select form-control form-control-sm">
+                          <option>กรุณาเลือก</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                        <label for="name" class="control-label">อำเภอ/เขต</label>
+                        <select class="custom-select form-control form-control-sm">
+                          <option>กรุณาเลือก</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                        <label for="name" class="control-label">ตำบล/แขวง</label>
+                        <select class="custom-select form-control form-control-sm">
+                          <option>กรุณาเลือก</option>
+                        </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                        <label for="name" class="control-label">พื้นที่ดูแล</label>
+                        <select class="custom-select form-control form-control-sm">
+                          <option>กรุณาเลือก</option>
+                        </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="pills-listteam" role="tabpanel" aria-labelledby="pills-listteam-tab">
+                <div class="container">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <!-- Table Nav -->
+                    <div class="table-nav navbar navbar-expand-lg navbar-light">
+                      <div class="table-nav-filter">
+                        <form action="">
+                          <span>แสดง&nbsp;</span>
+                          <select class="custom-select form-control form-control-sm">
+                            <option>10</option>
+                          </select>
+                          <span>&nbsp;รายการ</span>
+                        </form>
+                      </div>
+                      <div class="table-nav-search">
+                        <form class="form-inline my-2 my-lg-0">
+                          <ion-icon name="search-sharp"></ion-icon>
+                          <input class="form-control" type="search" placeholder="กรอกคำที่ต้องการค้นหา" aria-label="Search">
+                        </form>
+                      </div>
+                    </div>
+
+                    <!-- Table Group -->
+                    <div class="" style="width: 100%; overflow: scroll;">
+                      <table class="table table-inverse|reflow|striped|bordered|hover|sm">
+                        <thead>
+                          <tr>
+                            <th>ลำดับ <ion-icon name="caret-down-sharp"></ion-icon></th>
+                            <th>ชื่อ-นามสกุล <ion-icon name="caret-down-sharp"></ion-icon></th>
+                            <th>บทบาทหน้าที่ <ion-icon name="caret-down-sharp"></ion-icon></th>
+                            <th>สถานะ <ion-icon name="caret-down-sharp"></ion-icon></th>
+                            <th>&nbsp;</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>กวิน คงรักษา</td>
+                            <td>เจ้าหน้าที่สำรวจ</td>
+                            <td><span class="status-active">เปิดใช้งาน</span></td>
+                            <td>
+                              <button class="btn btn-link" data-toggle="modal" data-target="#editGroupModal">
+                                <ion-icon name="pencil-sharp"></ion-icon> แก้ไขข้อมูล
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>จิตรกร ออมสิน</td>
+                            <td>เจ้าหน้าที่สำรวจ</td>
+                            <td><span class="status-active">เปิดใช้งาน</span></td>
+                            <td>
+                              <button class="btn btn-link" data-toggle="modal" data-target="#editGroupModal">
+                                <ion-icon name="pencil-sharp"></ion-icon> แก้ไขข้อมูล
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>คนดี ไม่มีที่อยู่</td>
+                            <td>เจ้าหน้าที่สำรวจ</td>
+                            <td><span class="status-inactive">ปิดใช้งาน</span></td>
+                            <td>
+                              <button class="btn btn-link" data-toggle="modal" data-target="#editGroupModal">
+                                <ion-icon name="pencil-sharp"></ion-icon> แก้ไขข้อมูล
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Table Pagination -->
+                    <div class="table-pagination" aria-label="Page navigation">
+                      <div class="list-detail">
+                        กำลังแสดง&nbsp;<span>1</span>&nbsp;ถึง&nbsp;<span>10</span>&nbsp;ของ&nbsp;<span>100</span>&nbsp;รายการ
+                      </div>
+                      <ul class="pagination ml-auto">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true"><ion-icon name="play-skip-back-sharp"></ion-icon></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true"><ion-icon name="caret-back-sharp"></ion-icon></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true"><ion-icon name="caret-forward-sharp"></ion-icon></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true"><ion-icon name="play-skip-forward-sharp"></ion-icon></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
@@ -747,16 +823,16 @@
             <!-- Tabs - Nav -->
             <ul class="nav nav-pills mb-3" id="pills-editGroup-tab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="pills-infouser-tab" data-toggle="pill" href="#pills-infouser" role="tab" aria-controls="pills-infouser" aria-selected="true"><h5>ข้อมูลทีมงาน</h5></a>
+                <a class="nav-link active" id="pills-infouser-tab" data-toggle="pill" href="#pills-edit-infouser" role="tab" aria-controls="pills-infouser" aria-selected="true"><h5>ข้อมูลทีมงาน</h5></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="pills-listteam-tab" data-toggle="pill" href="#pills-listteam" role="tab" aria-controls="pills-listteam" aria-selected="false"><h5>รายชื่อทีมงาน</h5></a>
+                <a class="nav-link" id="pills-listteam-tab" data-toggle="pill" href="#pills-edit-listteam" role="tab" aria-controls="pills-listteam" aria-selected="false"><h5>รายชื่อทีมงาน</h5></a>
               </li>
             </ul>
             <!-- Tabs - Content -->
             <div class="tab-content" id="pills-tabContent">
               <!-- Tabs - Info User -->
-              <div class="tab-pane fade show active" id="pills-infouser" role="tabpanel" aria-labelledby="pills-infouser-tab">
+              <div class="tab-pane fade show active" id="pills-edit-infouser" role="tabpanel" aria-labelledby="pills-edit-infouser-tab">
                 <form>
                   <div class="row">
                     <div class="form-group col-xs-12 col-sm-12 col-md-4">
@@ -811,7 +887,7 @@
                   </div>
                 </form>
               </div>
-              <div class="tab-pane fade" id="pills-listteam" role="tabpanel" aria-labelledby="pills-listteam-tab">
+              <div class="tab-pane fade" id="pills-edit-listteam" role="tabpanel" aria-labelledby="pills-edit-listteam-tab">
                 <div class="container">
                   <!-- Table -->
                   <div class="table-responsive">
