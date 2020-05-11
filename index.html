@@ -30,9 +30,38 @@
           <!-- For test -->
           <a href="manageuser.html" class="btn btn-primary">เข้าสู่ระบบ</a>
         </form>
-        <a href="#" id="forgetpassword">ลืมรหัสผ่าน</a>
+        <button type="button" id="forgetpassword" class="btn btn-link" data-toggle="modal" data-target="#forgetpasswordModal">ลืมรหัสผ่าน</button>
       </div>
     </div>
+
+    <!-- Modal forgetpassword -->
+    <div class="modal fade" id="forgetpasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgetpasswordTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="forgetpasswordLongTitle">ลืมรหัสผ่าน</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-6">
+                    <label for="email" class="control-label">อีเมล</label>
+                    <input type="email" class="form-control" id="forgetpassword-email" placeholder="กรุณากรอกอีเมล" value="">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
+            <button type="button" class="btn btn-primary">ส่ง</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
